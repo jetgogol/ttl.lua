@@ -2,7 +2,7 @@
 
 SRC = ttl.lua
 
-all: cttl html
+all: cttl
 
 cttl: $(SRC)
 	luac -o ttl.luac $(SRC)
