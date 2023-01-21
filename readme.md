@@ -11,8 +11,8 @@ To use command prefix your input with ':' or '/'.
 #### Change from to languages
 
 ```
-:from-to _languageA_ _languageB
-:ft _languageA _languageB
+:from-to languageA languageB
+:ft languageA languageB
 ```
 
 #### Swap selected languages
