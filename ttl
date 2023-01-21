@@ -1,2 +1,2 @@
 #!/usr/bin/sh
-lua ttl.luac
+lua ttl.luac $*
