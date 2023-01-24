@@ -1,27 +1,26 @@
 # ttl - translate to language
 
-SRC = ttl.lua
+SRC = json.lua translate.lua split.lua ttl.lua
 
 all: cttl
 
-cttl: $(SRC)
-	luac -o ttl.luac $(SRC)
-	chmod +x ttl
+cttl:
+	mkdir -p build
+	cp $(SRC) build
 
 clean:
-	rm ttl.luac
+	rm -rf build
 	rm readme.html
-	chmod -x ttl
 
 html:
 	md2html readme.md > readme.html
 
 install: cttl
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -f ttl.luac $(DESTDIR)$(PREFIX)/bin
+	cp -a build $(DESTDIR)$(PREFIX)/bin/ttl.d
 	cp -f ttl $(DESTDIR)$(PREFIX)/bin
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/ttl
+	chmod +x $(DESTDIR)$(PREFIX)/bin/ttl
 
 uninstall:
+	rm -rf $(DESTDIR)$(PREFIX)/bin/ttl.d
 	rm $(DESTDIR)$(PREFIX)/bin/ttl
-	rm $(DESTDIR)$(PREFIX)/bin/ttl.luac

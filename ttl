@@ -1,2 +1,3 @@
 #!/usr/bin/sh
-lua /bin/ttl.luac $*
+cd /bin/ttl.d/
+lua ttl.lua $*

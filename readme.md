@@ -32,3 +32,6 @@ To use command prefix your input with ':' or '/'.
 :quit
 :q
 ```
+
+## Dependencys
+lua-sockets for lua 5.4.4
