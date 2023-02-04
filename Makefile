@@ -23,8 +23,9 @@ install: cttl
 	cp -f ttl $(DESTDIR)$(PREFIX)/bin
 	chmod +x $(DESTDIR)$(PREFIX)/bin/ttl
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
-	sed "s/VERSION/$(VERSION)/g" < ttl.1 > $(DESTDIR)$(MANPREFIX)/man1/ttl.1
-	cp ttl.1 $(DESTDIR)$(MANPREFIX)/man1/ttl.1
+	
+	sed "s/VERSION/$(VERSION)/g" < ttl.pre > ttl.1
+	mv ttl.1 $(DESTDIR)$(MANPREFIX)/man1/ttl.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/ttl.1
 
 uninstall:
