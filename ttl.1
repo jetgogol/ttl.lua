@@ -1,0 +1,26 @@
+.TH TTL 1
+.SH NAME
+ttl \- translate to language
+.SH SYNOPSIS
+.B ttl
+[\fIlanguageA\fP]
+[\fIlanguageB\fP]
+.SH DESCRIPTION
+.B ttl
+is simple lua script to provide cli interface to google translate.
+.SH COMMANDS
+commands should be prefixed with ":" or "/"
+.P
+.TP 8
+.B :ft, :from-to [\fIlanguageA\fP] [\fIlanguageB\fP]
+change from language and to language. If one of languages don't setted it will be en.
+.TP 8
+.B :s, :swap
+set languageA to languageB and vice versa.
+.TP 8
+.B :c, :clip
+copy last translated string to clipboard
+.TP 8
+.B :q, :quit
+quit from
+.B ttl
