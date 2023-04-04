@@ -4,7 +4,7 @@
 require("translate")
 require("split")
 
-l1, l2 = ...
+l1, l2, s = ...
 if l1 == nil then
 	l1 = "en"
 end
@@ -41,6 +41,12 @@ commands = {
 }
 
 last_out = nil
+
+if s ~= nil then
+	print(translate(s, l1, l2))
+	os.exit(0)
+end
+
 while true do
 	::input::
 	input = io.read()
