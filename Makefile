@@ -18,8 +18,8 @@ html:
 	md2html readme.md > readme.html
 
 install: cttl
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -a build $(DESTDIR)$(PREFIX)/bin/ttl.d
+	mkdir -p $(DESTDIR)$(PREFIX)/bin/ttl.d
+	cp -a ./build/. $(DESTDIR)$(PREFIX)/bin/ttl.d
 	cp -f ttl $(DESTDIR)$(PREFIX)/bin
 	chmod +x $(DESTDIR)$(PREFIX)/bin/ttl
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
